@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h2 id="title" class="title">Em có yêu anh hông ?</h2>
+        <div class="container" id="container">
+            <button id="agree" class="agree">Có</button>
+            <button id="degree" class="degree">Không</button>
+        </div>
+
+        <h1>Anh cũng yêu em nhiều lắm :333</h1>
+        <h1>Quốc Bảo yêu Minh Châu nhiều lắm moa moa :333</h1>
+    </div>
+
+    <script>
+        let agreeBtn = document.getElementById("agree");
+        let degreeBtn = document.getElementById("degree");
+        let title = document.getElementById("title");
+        let container = document.getElementById("container");
+
+        let result = document.getElementsByTagName("h1");
+
+        degreeBtn.addEventListener("click", zoomIn);
+        agreeBtn.addEventListener("click", display);
+
+        let scale = 1;
+
+        function zoomIn() {
+            scale += 0.1;
+            agreeBtn.style.transform = `scale(${scale})`;
+        }
+
+        function display() {
+            result[0].style.display = "block";
+            result[1].style.display = "block";
+            title.style.display = "none";
+            container.style.display = "none";
+        }
+    </script>
+</body>
+</html>
